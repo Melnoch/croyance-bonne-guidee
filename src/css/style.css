@@ -1,34 +1,51 @@
+/* === Base Reset and Setup === */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 30px;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Amiri', serif;
     background-color: #f9f7f3;
     color: #333;
-    padding: 40px;
+    padding: 2.5rem;
     line-height: 2;
+    overflow-x: hidden;
 }
 
+/* === Container === */
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
     text-align: center;
+    padding: 0 1rem;
 }
 
+/* === Headings === */
 h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
     color: #5a3e36;
     text-align: center;
 }
 
 h2 {
     font-size: 1.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     color: #7b615c;
     text-align: center;
 }
 
+/* === Main Text Content === */
 .text-content {
     font-size: 1.3rem;
     text-align: justify;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .text-content span {
@@ -46,8 +63,9 @@ h2 {
     color: white;
 }
 
+/* === Repeat Button === */
 .repeat-btn {
-    position: fixed; /* fixed to viewport */
+    position: fixed;
     bottom: 20px;
     right: 20px;
     width: 50px;
@@ -58,15 +76,83 @@ h2 {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 1000; /* above everything */
+    z-index: 1000;
     transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.repeat-btn svg {
+    width: 28px;
+    height: 28px;
+    stroke: #fff;
+    fill: currentColor;
+    pointer-events: none;
 }
 
 .repeat-btn.active {
-    background-color: #0a9e47; /* green when active */
+    background-color: #0a9e47;
     transform: scale(1.1);
 }
 
 .repeat-btn:hover {
     opacity: 0.9;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .text-content {
+        font-size: 1.15rem;
+    }
+
+    .repeat-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .text-content {
+        font-size: 1rem;
+    }
+
+    .repeat-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
 }
