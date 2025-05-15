@@ -1,0 +1,47 @@
+body {
+    font-family: 'Amiri', serif;
+    background-color: #f9f7f3;
+    color: #333;
+    padding: 40px;
+    line-height: 2;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #5a3e36;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #7b615c;
+    text-align: center;
+}
+
+.text-content {
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.text-content span {
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 2px 4px;
+}
+
+.text-content span:hover {
+    background-color: #e0d5c9;
+}
+
+.text-content span.active {
+    background-color: #5a3e36;
+    color: white;
+}
