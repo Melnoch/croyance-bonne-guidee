@@ -135,7 +135,7 @@ h2 {
     }
 
     body {
-        padding: 1rem;
+        padding: 1rem 1rem 5rem;
     }
 
     h1 {
@@ -154,5 +154,107 @@ h2 {
         width: 40px;
         height: 40px;
         font-size: 20px;
+    }
+}
+.player-controls {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    z-index: 999;
+    background: #c5bba7;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.player-controls input[type="number"] {
+    width: 90px;
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.play-btn {
+    background-color: #5a3e36;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    color: white;
+}
+
+.play-btn:hover {
+    background-color: #7b615c;
+    transform: scale(1.05);
+}
+
+.play-btn.active {
+    background-color: #0a9e47; /* green */
+    color: white;
+}
+
+.play-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.stop-btn {
+    background-color: #5a3e36;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    color: white;
+}
+
+.stop-btn:hover {
+    background-color: #7b615c;
+    transform: scale(1.05);
+}
+
+.stop-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+@media (max-width: 480px) {
+    .player-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem;
+        right: 70px
+    }
+
+    .player-controls input[type="number"] {
+        width: 70px;
+        font-size: 0.9rem;
+        padding: 0.25rem 0.4rem;
+    }
+
+    .player-btn,
+    .repeat-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .player-btn svg,
+    .repeat-btn svg {
+        width: 20px;
+        height: 20px;
     }
 }
