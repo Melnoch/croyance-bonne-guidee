@@ -151,4 +151,36 @@ document.addEventListener('DOMContentLoaded', function () {
             startInput.value = end;
         }
     });
+
+    // Language switching
+    const langToggle = document.getElementById('langToggle');
+    const langAr = document.querySelector('.lang-ar');
+    const langFr = document.querySelector('.lang-fr');
+
+    let currentLang = 'ar';
+
+    langToggle.addEventListener('click', () => {
+        // Stop audio when switching language
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        }
+
+        document.querySelectorAll('.text-content span')
+            .forEach(s => s.classList.remove('active'));
+
+        if (currentLang === 'ar') {
+            langAr.classList.remove('active');
+            langFr.classList.add('active');
+            document.documentElement.setAttribute('dir', 'ltr');
+            langToggle.textContent = 'AR';
+            currentLang = 'fr';
+        } else {
+            langFr.classList.remove('active');
+            langAr.classList.add('active');
+            document.documentElement.setAttribute('dir', 'rtl');
+            langToggle.textContent = 'FR';
+            currentLang = 'ar';
+        }
+    });
 });

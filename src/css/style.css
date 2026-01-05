@@ -232,6 +232,48 @@ h2 {
     height: 24px;
     fill: currentColor;
 }
+.lang {
+    display: none;
+}
+
+.lang.active {
+    display: block;
+}
+
+/* Arabic */
+.lang-ar {
+    font-family: 'Amiri', serif;
+    text-align: right;
+}
+/* French */
+.lang-fr {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    text-align: justify;
+    line-height: 1.6;
+}
+/* Language button */
+.lang-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: #5a3e36;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.ayah {
+    font-size: 24pt;
+    line-height: normal;
+    text-align: center;
+    font-family: 'Amiri';
+    direction: rtl;
+    color: #046380;
+    margin-bottom: 12pt !important;
+}
 @media (max-width: 480px) {
     .player-controls {
         flex-wrap: wrap;
